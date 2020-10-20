@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+#mikes-title {
+    font-family: Century;
+    color: white;
+    text-shadow: 4px 4px #828282;
+    font-size: 9.5vw;
+    padding: 1vw;
+    white-space: nowrap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#mikes-title-deli {
+    font-family: Arial;
+    color: #597198;
+    white-space: pre-line;
+    font-size: 3vw;
+    transform: rotate(270deg);
+    white-space: nowrap;
+    width: 10%;
+    height: 100%;
+    margin-left: -2%;
+    margin-top: 7%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+#mikes-container {
+    background-color: #1400A2;
+    border-color: #D66824;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#delicious {
+    font-family: "Bodoni MT Black";
+    font-style: italic;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    text-align: center;
+    color: #A29797;
+    font-size: 2.5vw;
 }
 
-.App-link {
-  color: #61dafb;
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 9vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+    background-color: #1400A2;
+    font-family: Arial;
+    border-color: #D66824;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    width: calc(200px + 20vw);
+    color: white;
+    margin: 15px 15px;
+    text-align: center;
+    font-size: 42px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#slogan {
+    text-align: center;
+    margin-top: 2vh;
+    color: #D66824;
+    text-shadow: 0px 2px #3E3838;
+    font-family: Arial;
+    font-size: 42px;
+    white-space: nowrap;
+}
+
+#copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #A29797;
+}
+
+.button:hover {
+    background-color: #597198;
+}
+
+.widemodal {
+    width: 80vw;
+}
+
+#contactinfo {
+    text-align: center;
+
+}
+
+.parts {
+    display:flex;
+}
+
+.add-button {
+    position: absolute;
+    right: 10px;
+}
+
+.item-name {
+    font-size: 16px;
+}
+
+.item-description {
+    font-size: 10px;
+}
+
+.item {
+    margin-top: 5px
 }
