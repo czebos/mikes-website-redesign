@@ -2,16 +2,22 @@
     font-family: Century;
     color: white;
     text-shadow: 4px 4px #828282;
-    font-size: 9.5vw;
-    padding: 1vw;
+    font-size: min(9.5vw, 120px);
+    padding-left: 1vw;
     white-space: nowrap;
+}
+
+#top{
+    margin: auto;
+    width: 100vw;
+    text-align: center;
 }
 
 #mikes-title-deli {
     font-family: Arial;
     color: #597198;
     white-space: pre-line;
-    font-size: 3vw;
+    font-size: min(3vw, 40px);
     transform: rotate(270deg);
     white-space: nowrap;
     width: 10%;
@@ -27,9 +33,9 @@
     border-width: 5px;
     border-style: solid;
     border-radius: 5px;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    width: 80vw;
+    margin-left:auto;
+    margin-right: auto;
+    width: min(80vw, 1024px);
     display: flex;
 }
 
@@ -43,13 +49,17 @@
     width: 90vw;
     text-align: center;
     color: #A29797;
-    font-size: 2.5vw;
+    font-size: min(2.5vw, 30px);
 }
 
 #buttons {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 9vw;
+    align-items: center;
+    width: min(82vw, 1100px);
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
 }
 
 .button {
@@ -59,11 +69,11 @@
     border-width: 5px;
     border-style: solid;
     border-radius: 5px;
-    width: calc(200px + 20vw);
+    width: min(calc(25px + 15vw), 200px);
     color: white;
-    margin: 15px 15px;
+    margin: auto;
     text-align: center;
-    font-size: 42px;
+    font-size: calc(16px + 2vw);
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -117,3 +127,73 @@
 .item {
     margin-top: 5px
 }
+
+.button:hover {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    font-family: Calibri;
+}
+
+.page {
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: min(80vw, 1024px);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #00235d;
+    border-radius: 25px;
+    color: white;
+    border-color: #D66824;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 1vw;
+    align-items: center;
+}
+
+.welcome {
+    font-size: calc(16px + 2vw);
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.img-cont {
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.welcome-img {
+    width: min(50vw, 600px);
+    border-color: #D66824;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.about-para {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-align: center;
+    font-size: calc(8px + .75vw);
+}
+
+.about-imgs {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1vh;
+    margin-bottom: 1vh
+}
+
+.about-img {
+    width: min(35vw, 350px);
+    margin: auto;
+    border-color: #D66824;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+

@@ -2,6 +2,8 @@ import React, { useState} from 'react';
 
 import './App.css';
 
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Modal from 'react-bootstrap/Modal';
@@ -9,42 +11,90 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Spinner from 'react-bootstrap/Spinner';
 
+import HoursButton from './HoursButton'
+import Menu from './Menu'
+import Contact from './Contact'
+
+import img1 from './img/img1.jpg'
+import calzone1 from './img/calzone1.jpg'
+import calzone2 from './img/calzone2.jpg'
+
 function App() {
     return (
-      <div id='app'>
-      <div id="top">
-          <div id="mikes-container">
-              <div id="mikes-title">Mike's Calzones </div>
-              <div id="mikes-title-deli">&amp; DELI</div>
-          </div>
-          <div id="delicious">
-              Delicious Starters, Calzones, Wraps, Salads and much more!
-        </div>
-      </div>
+        <BrowserRouter>
+            <Switch>
+                <Route path="/menu">
+                    <Menu/>
+                </Route>
+                <Route path="/contact">
+                    <Contact />
+                </Route>
+                <Route path="/">
+                    <div id='app'>
+                    <div id="top">
+                        <div id="mikes-container">
+                            <div id="mikes-title">Mike's Calzones </div>
+                            <div id="mikes-title-deli">&amp; DELI</div>
+                        </div>
+                        <div id="delicious">
+                            Delicious Starters, Calzones, Wraps, Salads and much more!
+                    </div>
+                    </div>
 
-      <div id="buttons">
-                <AboutButton> </AboutButton>
-                <MenuButton> </MenuButton>
-                <HoursButton> </HoursButton>
-                <ContactButton> </ContactButton>
+                        <div id="buttons">
+                            <Link to='/' className='button'>
+                                About
+                            </Link>
+                            <Link to='/menu' className='button'>
+                                Menu
+                            </Link>
+                            <HoursButton> </HoursButton>
+                            <Link to='/contact' className='button'>
+                                Contact
+                            </Link>
 
-      </div>
-            <div id="bottom">
-                <div id='slogan'>
-                    Eat Fun. Eat Fresh.
-                 </div>
+                        </div>
 
-                <hr/>
-                <div id='copyright'>
-                    Content copyright 2020. MIKESCALZONES.COM. All rights reserved.
+                        <div className="page">
+                            <div className='welcome'>
+                                Welcome to Mike's Calzones!
+                            </div>
+                            <div className='img-cont'> <img className='welcome-img' src={img1} /></div>
+                            <div className='about-para'>
+                                Hungry? Looking for an affordable and satisfying meal? <br></br> <br></br>
+                                The East Side has a wonderful new place for you. Mike's Calzones & Deli. <br></br> <br></br>
+
+                                Choose from a wide assortment of calzones, wraps, subs and more! 
+                                Select from the menu or build your own. Whether browsing the East Side or just pausing for a few moments, Mike's Calzones is the place for you.
+                            </div>
+
+                            <div className='about-imgs'>
+                                <img className='about-img' src={calzone1} />
+                                <img className='about-img' src={calzone2} />
+                            </div>
+
+                            <div className='about-para'>
+                                The delicious food, friendly service and comfortable setting makes it the perfect stop for lunch or dinner!
+                            </div>
+                        </div>
+                        <div id="bottom">
+                            <div id='slogan'>
+                                Eat Fun. Eat Fresh.
+                                </div>
+
+                            <hr/>
+                            <div id='copyright'>
+                                Content copyright 2020. MIKESCALZONES.COM. All rights reserved.
 
 
-                </div>
+                            </div>
 
-            </div>
+                        </div>
 
-      </div>
-
+                    </div>
+                </Route>
+        </Switch>
+    </BrowserRouter>
 
     );
 }
@@ -124,34 +174,6 @@ function MenuButton() {
           </Button>
                     <Button variant="primary" onClick={handleClose}>
                         Save Changes
-          </Button>
-                </Modal.Footer>
-            </Modal>
-        </>
-    );
-}
-
-function HoursButton() {
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-    return (
-        <>
-            <div class='button' onClick={handleShow}>
-                Hours
-        </div>
-
-            <Modal size='lg' show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Current Hours For Mike's Calzones</Modal.Title>
-                </Modal.Header>
-                <Modal.Body> <iframe src="https://calendar.google.com/calendar/embed?src=c_a5okmhuvk2lqmrv1oa9irqab8c%40group.calendar.google.com&ctz=America%2FNew_York" style={{ border: 0 }} width="100%" height="600" frameborder="0" scrolling="no"></iframe></Modal.Body>
-
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
           </Button>
                 </Modal.Footer>
             </Modal>
