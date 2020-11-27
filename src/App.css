@@ -69,13 +69,12 @@
     border-width: 5px;
     border-style: solid;
     border-radius: 5px;
-    width: min(calc(25px + 15vw), 200px);
+    width: min(calc(25px + 15vw), 250px);
     color: white;
     margin: auto;
     text-align: center;
     font-size: calc(16px + 2vw);
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px;
 }
 
 #slogan {
@@ -109,15 +108,18 @@
 
 .parts {
     display:flex;
+    margin-bottom: 1vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .add-button {
-    position: absolute;
     right: 10px;
 }
 
 .item-name {
-    font-size: 16px;
+    font-size: calc(8px + .75vw);
+    width: 20vw;
 }
 
 .item-description {
@@ -196,4 +198,59 @@ body {
     border-radius: 5px;
 }
 
+.menu-title {
+    font-size: calc(16px + 2vw);
+    color: gray;
+}
 
+.orange-line {
+    width: min(70vw, 950px);
+    height: 1vh;
+    background-color: #D66824;
+}
+
+.list-item {
+    margin: 10px;
+    display: flex;
+}
+
+.buttonContainer {
+    width :100%;
+    text-align:right;
+}
+
+.title {
+    margin-top: 2vh;
+    text-align: center;
+    font-size: calc(16px + 2vw);
+}
+
+.center {
+
+}
+
+.parts2{
+    display: flex;
+    width: 100%;
+}
+
+.right {
+    text-align: right;
+}
+
+.form {
+    margin-left: 2vw;
+}
+
+.contact-info {
+    width: 100%;
+    text-align: center;
+}
+
+.Fa{
+    width: 10vw;
+}
+.num {
+    margin: 1vh;
+    margin-bottom: 3vh;
+}

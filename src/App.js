@@ -19,85 +19,106 @@ import img1 from './img/img1.jpg'
 import calzone1 from './img/calzone1.jpg'
 import calzone2 from './img/calzone2.jpg'
 
-function App() {
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/menu">
-                    <Menu/>
-                </Route>
-                <Route path="/contact">
-                    <Contact />
-                </Route>
-                <Route path="/">
-                    <div id='app'>
-                    <div id="top">
-                        <div id="mikes-container">
-                            <div id="mikes-title">Mike's Calzones </div>
-                            <div id="mikes-title-deli">&amp; DELI</div>
-                        </div>
-                        <div id="delicious">
-                            Delicious Starters, Calzones, Wraps, Salads and much more!
+class App extends React.Component {
+
+    constructor(props) {
+        super(props)
+       
+    }
+
+    render(){
+        return (
+            <BrowserRouter>
+                <div id="fb-root"></div>
+                    <Switch>
+                        <Route path="/menu">
+                            <Menu />
+                        </Route>
+                        <Route path="/contact">
+                            <Contact />
+                        </Route>
+                        <Route path="/" render={() => <HomeContainer />}>
+
+                        </Route>
+                    </Switch>
+                </BrowserRouter>
+
+        );
+    }
+}
+
+class HomeContainer extends React.Component {
+
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return (<div id='app'>
+            <div id="top">
+                <div id="mikes-container">
+                    <div id="mikes-title">Mike's Calzones </div>
+                    <div id="mikes-title-deli">&amp; DELI</div>
+                </div>
+                <div id="delicious">
+                    Delicious Starters, Calzones, Wraps, Salads and much more!
                     </div>
-                    </div>
+            </div>
 
-                        <div id="buttons">
-                            <Link to='/' className='button'>
-                                About
+            <div id="buttons">
+                <Link to='/' className='button'>
+                    About
                             </Link>
-                            <Link to='/menu' className='button'>
-                                Menu
+                <Link to='/menu' className='button'>
+                    Order
                             </Link>
-                            <HoursButton> </HoursButton>
-                            <Link to='/contact' className='button'>
-                                Contact
+                <HoursButton> </HoursButton>
+                <Link to='/contact' className='button'>
+                    Contact
                             </Link>
 
-                        </div>
+            </div>
 
-                        <div className="page">
-                            <div className='welcome'>
-                                Welcome to Mike's Calzones!
+            <div className="page">
+                <div className='welcome'>
+                    Welcome to Mike's Calzones!
                             </div>
-                            <div className='img-cont'> <img className='welcome-img' src={img1} /></div>
-                            <div className='about-para'>
-                                Hungry? Looking for an affordable and satisfying meal? <br></br> <br></br>
+                <div className='img-cont'> <img className='welcome-img' src={img1} /></div>
+                <div className='about-para'>
+                    Hungry? Looking for an affordable and satisfying meal? <br></br> <br></br>
                                 The East Side has a wonderful new place for you. Mike's Calzones & Deli. <br></br> <br></br>
 
-                                Choose from a wide assortment of calzones, wraps, subs and more! 
+                                Choose from a wide assortment of calzones, wraps, subs and more!
                                 Select from the menu or build your own. Whether browsing the East Side or just pausing for a few moments, Mike's Calzones is the place for you.
                             </div>
 
-                            <div className='about-imgs'>
-                                <img className='about-img' src={calzone1} />
-                                <img className='about-img' src={calzone2} />
-                            </div>
+                <div className='about-imgs'>
+                    <img className='about-img' src={calzone1} />
+                    <img className='about-img' src={calzone2} />
+                </div>
 
-                            <div className='about-para'>
-                                The delicious food, friendly service and comfortable setting makes it the perfect stop for lunch or dinner!
+                <div className='about-para'>
+                    The delicious food, friendly service and comfortable setting makes it the perfect stop for lunch or dinner!
                             </div>
-                        </div>
-                        <div id="bottom">
-                            <div id='slogan'>
-                                Eat Fun. Eat Fresh.
+            </div>
+            <div id="bottom">
+                <div id='slogan'>
+                    Eat Fun. Eat Fresh.
                                 </div>
 
-                            <hr/>
-                            <div id='copyright'>
-                                Content copyright 2020. MIKESCALZONES.COM. All rights reserved.
+                <hr />
+                <div id='copyright'>
+                    Content copyright 2020. MIKESCALZONES.COM. All rights reserved.
 
 
                             </div>
 
-                        </div>
-
-                    </div>
-                </Route>
-        </Switch>
-    </BrowserRouter>
-
-    );
+            </div>
+        </div>)
+    }
 }
+
+
 
 
 function AboutButton() {
@@ -242,7 +263,6 @@ function ContactButton() {
         </>
     );
 }
-
 
 
 export default App;
